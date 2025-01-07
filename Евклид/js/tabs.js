@@ -30,4 +30,12 @@ window.addEventListener('DOMContentLoaded', function(){
         active: true
     });
 
+    this.document.querySelector('.header__burger').addEventListener('click', function(){
+        document.querySelector('.burger__menu').classList.add('is-active')
+    })
+
+    this.document.querySelector('.burger__close-icon').addEventListener('click', function(){
+        document.querySelector('.burger__menu').classList.remove('is-active')
+    })
+
 })
