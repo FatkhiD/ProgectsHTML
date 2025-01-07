@@ -53,6 +53,7 @@ li {
 }
 
 body {
+    position: relative;
     width:1920px;
     background-color: #FFFFFF;
 }
@@ -93,6 +94,39 @@ h2, h3 {
     height: 23px;
     background: url("../img/burger_icon.png") center center no-repeat;
     display: none;
+}
+
+.burger__menu {
+    position: absolute;
+    z-index: 2;
+    width: 420px;
+    height: 808px;
+    top: 0;
+    left: 0;
+    padding: 38px 50px;
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 32px 32px;
+    transition: transform .3s ease-in-out;
+    transform: translateY(-101%);
+}
+
+.burger__menu.is-active {
+    transform: none;
+}
+
+.burger__close-icon {
+    width: 23px;
+    height: 24.2px;
+    cursor: pointer;
+    margin-bottom: 107.77px;
+}
+
+.menu__elements {
+    display: flex;
+    flex-direction: column;
+}
+li.elements__items {
+    margin-bottom: 60px;
 }
 
 .nav__list {
@@ -144,7 +178,7 @@ h2, h3 {
     height: 620px;
 }
 
-#swiper_2 {
+#swiper_2, #swiper_3, #swiper_4 {
     display: none;
 }
 
@@ -389,8 +423,10 @@ h2, h3 {
 .how-we-work__element-768 {
     width: 668px;
     height: 284px;
-    border-radius: 24px;
-    background: url("../img/how-we-work_bg_768.png") center center no-repeat;
+    display: none;
+}
+
+.block__right-block_768, .block__right-block_320 {
     display: none;
 }
 
@@ -850,6 +886,10 @@ h2, h3 {
         display: none;
     }
 
+    .block__right-block_1024 {
+        display: block;
+    }
+
     /* questions */
 
     .questions {
@@ -956,6 +996,10 @@ h2, h3 {
         background: url("../img/search.svg");
     }
 
+    .burger__menu {
+        height: 771px;
+    }
+
     /* order-calculation */
 
     .order-calculation {
@@ -964,16 +1008,29 @@ h2, h3 {
 
     .order-calculation__container {
         height: 662px;
-        width: 668px;
-        padding: 160px 40px;
-        background: url("../img/calculation_back_768.png") center center no-repeat;   
-        border-radius: 24px; 
+    }
+
+    .swiper {
+        z-index: 0;
+        width: 686px;
+        height: 662px;
+    }
+    
+    .swiper-pagination {
+        --swiper-pagination-bullet-inactive-color:  #CACACA;
+        --swiper-pagination-top: 580px;
+        --swiper-pagination-color: #FFFFFF;
+        --swiper-pagination-bullet-size: 15px;
+        --swiper-pagination-bullet-width: 15px;
+        --swiper-pagination-bullet-heigh: 15px;
+        --swiper-pagination-bullet-horizontal-gap: 9.5px;
     }
 
     .order-calculation__title {
         font-size: 50px;
         font-weight: 800;
         line-height: 60.95px;
+        width: 588px;
         color: #FFFFFF;
     }
 
@@ -988,6 +1045,15 @@ h2, h3 {
     .order-calculation__btn {
         margin-top: 60px;
     }
+
+    #swiper_1, #swiper_2 {
+        display: none;
+    }
+
+    #swiper_3 {
+        display: block;
+    }
+    
 
     /* about-us */
 
@@ -1049,6 +1115,7 @@ h2, h3 {
 
     .how-we-work {
         margin-top: 838px;
+        position: relative;
     }
 
     .how-we-work__container {
@@ -1069,6 +1136,16 @@ h2, h3 {
         display: block;
     }
 
+    .block__right-block_768 {
+        position: absolute;
+        display: block;
+        top: 180px;
+    }
+
+    .left-block__title {
+        margin-top: 38px;
+    }
+
     .how-we-work__block {
         margin-top: 38px;
     }
@@ -1082,7 +1159,7 @@ h2, h3 {
         letter-spacing: 0px;
     }
 
-    .block__right-block {
+    .block__right-block, .block__right-block_1024 {
         display: none;
     }
 
@@ -1105,9 +1182,15 @@ h2, h3 {
     }
 
     .block__question {
-        width: 570px;
+        width: 668px;
         font-size: 20px;
     }
+
+    #accordion .ui-accordion-header {
+        font-size: 20px;
+        padding-right: 60px;
+    }
+    
 
     /* footer */
 
@@ -1202,6 +1285,22 @@ h2, h3 {
         display: block;
     }
 
+    .burger__menu {
+        width: 320px;
+        height: 407px;
+        padding: 23px 15px;
+    }
+
+    .burger__close-icon {
+
+        height: 23px;
+        margin-bottom: 32px;
+    }
+
+    li.elements__items {
+        margin-bottom: 29px;
+    }
+
     .header__logo {
         width: 110px;
         height: 35px;
@@ -1219,15 +1318,43 @@ h2, h3 {
     .order-calculation__container {
         height: 308px;
         width: 290px;
-        padding: 60px 21px;
-        background: url("../img/calculation_back_320.png") center center no-repeat;   
-        border-radius: 24px; 
+    }
+
+    #swiper_3 {
+        display: none;
+    }
+
+    #swiper_4 {
+        display: block;
+    }
+
+    .swiper {
+        z-index: 0;
+        width: 290px;
+        height: 308px;
+    }
+    
+    .swiper-pagination {
+        --swiper-pagination-top: 283px;
+        --swiper-pagination-bullet-size: 10px;
+        --swiper-pagination-bullet-width: 10px;
+        --swiper-pagination-bullet-heigh: 10px;
+        --swiper-pagination-bullet-horizontal-gap: 9.5px;
+    }
+
+    .order-calculation-box {
+        z-index: 1;
+        position: absolute;
+        width: 1770px;
+        padding: 60px 21px 0px 21px;
+        top: 90px;
     }
 
     .order-calculation__title {
         font-size: 20px;
         font-weight: 800;
         line-height: 24.38px;
+        width: 247px;
         text-align: center;
         color: #FFFFFF;
     }
@@ -1334,6 +1461,7 @@ h2, h3 {
     /* how-we-work */
      
     .how-we-work {
+        position: relative;
         margin-top: 838px;
     }
 
@@ -1345,9 +1473,16 @@ h2, h3 {
     .how-we-work__element-768 {
         width: 290px;
         height: 160px;
-        border-radius: 24px;
-        background: url("../img/how-we-work_bg_320.png") center center no-repeat;
+    }
+
+    .block__right-block_768 {
+        display: none;
+    }
+
+    .block__right-block_320 {
         display: block;
+        position: absolute;
+        top: 83px;
     }
 
     .how-we-work__block {
@@ -1418,18 +1553,19 @@ h2, h3 {
     }
     
     .block__question {
-        width: 239px;
+        width: 290px;
+    }
+
+    #accordion .ui-accordion-header {
         font-size: 14px;
         font-weight: 500;
         line-height: 24px;
-        color: #000000;
     }
     
-    .block__icons {
+    #accordion .ui-accordion-header-icon {
         width: 30px;
         height: 30px;
-        background-color: transparent;
-        background: url("../img/+х_320.svg") center center no-repeat;
+        border-radius: 90px;   
     }
 
     /* footer */
