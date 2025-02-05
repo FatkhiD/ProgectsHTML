@@ -1,0 +1,27 @@
+@import "vars";
+@import "mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html, body, #_nuxt {
+    width: 100%;
+    height: 100dvh;
+}
+
+input, textarea, select {
+    outline: none;
+}
+
+input, textarea, select, button {
+    background: transparent;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
